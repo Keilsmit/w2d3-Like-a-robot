@@ -5,11 +5,13 @@ require 'erb'
 class Robot
 
   attr_accessor :name
-  #               :height
-  #
-  # def initialize(height=10)
-  #   self.height = height
-  # end
+                :height
+
+
+  def initialize(height=10)
+    self.height = height
+  end
+
 
   def initialize(name)
     self.name = name
@@ -50,7 +52,22 @@ robot = BendingUnit.new(ARGV[0])
 object = ARGV[1]
 
 
+
+
+# <!-- adventure mode begins here -->
 our_class = ["Keith", "Jon", "Luis", "Chris", "Mike", "Brent", "Zachary"]
+
+
+# second_class = []
+#
+# our_class.each do |name|
+#   second_class << Robot.new(name)
+# end
+
+
+updated_class = our_class.collect {|name| Robot.new(name)}
+
+
 
 
 
